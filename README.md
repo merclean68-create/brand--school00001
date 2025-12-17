@@ -1,69 +1,188 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: url('images/mercedess-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
-}
+[مشروع تطور الدات.txt](https://github.com/user-attachments/files/24223334/default.txt)
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>brand-school</title>
+    <style>
+        body {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo_2010.png/600px-Mercedes-Benz_logo_2010.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 10px 20px 10px;
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
 
-header {
-  background-color: rgba(0,0,0,0.7);
-  color: #ffffff;
-  padding: 20px;
-}
+        h1, h2, h3, p {
+            margin: 15px 0;
+            color: #333;
+        }
 
-header img {
-  height: 60px;
-  vertical-align: middle;
-}
+        button {
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #0077b6;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo_2010.png/600px-Mercedes-Benz_logo_2010.png');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 1px 1px 2px black;
+            word-break: keep-all;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-header nav a {
-  color: #c0c0c0;
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
 
-header nav a:hover {
-  color: #ffffff;
-}
+        #btn2 {
+            display: none;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #0077b6;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo_2010.png/600px-Mercedes-Benz_logo_2010.png');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 1px 1px 2px black;
+            word-break: keep-all;
+            transition: all 0.5s ease;
+        }
 
-main {
-  padding: 30px;
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 10px;
-  margin: 20px;
-}
+        /* صندوق الشرح */
+        #infoBox {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 119, 182, 0.9);
+            color: white;
+            font-size: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none; /* مخفي بشكل افتراضي */
+            text-align: right;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-footer {
-  background-color: rgba(0,0,0,0.8);
-  color: #c0c0c0;
-  text-align: center;
-  padding: 15px;
-}
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            button {
+                width: 90%;
+                font-size: 18px;
+            }
 
-footer a {
-  color: #c0c0c0;
-  text-decoration: none;
-}
+            #infoBox {
+                width: 90%;
+                font-size: 16px;
+                padding: 15px;
+            }
+        }
 
-footer a:hover {
-  color: #ffffff;
-}
+        /* إضافة class لظهور الصندوق مع الحركة */
+        .show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h1>brand-school شركة تعليم الجدب</h1>
+    <h2>دورة تعليم</h2>
+    <h3>قوامة الجسم</h3>
 
-.language-switcher {
-  margin-top: 10px;
-}
+    <!-- الأزرار الرئيسية -->
+    <button title="تعلم الأسلوب الفرنسي">Style France</button>
+    <button title="تعلم الأسلوب العربي">Style Arabic</button>
+    <button title="تعلم الأسلوب الإنجليزي">Style English</button>
+    <button title="اختيار التخصص">التخصص</button>
 
-.language-switcher a {
-  margin-right: 10px;
-  text-decoration: underline;
-  color: #c0c0c0;
-}
+    <!-- الزر لإظهار الزر المخفي -->
+    <button onclick="showBtn()" title="اضغط لإظهار الزر المخفي">اضغط لإظهار الزر</button>
+    <button id="btn2" title="اللغة + اختيار الكلمات + إرشاد إلى كتب جدب الزبون">
+        اللغة + اختيار الكلمات + إرشاد إلى كتب جدب الزبون
+    </button>
 
-/* RTL للعربية */
-[dir="rtl"] {
-  text-align: right;
-}
+    <!-- أزرار الشرح -->
+    <button onclick="showHindam()" title="تعلم الهندام">هندام</button>
+    <button onclick="showIsharat()" title="تعلم الإشارات">الإشارات</button>
+    <button onclick="showHarakat()" title="تعلم الحركات">الحركات</button>
+    <button onclick="showKalam()" title="تعلم الكلام">الكلام</button>
+
+    <!-- زر اتصل بنا -->
+    <button onclick="window.location.href='mailto:your-email@example.com'" title="اتصل بنا">
+        اتصل بنا
+    </button>
+
+    <!-- زر التواصل عبر فيسبوك -->
+    <button onclick="window.open('https://www.facebook.com/YourPage', '_blank')" title="تواصل معنا على فيسبوك">
+        فيسبوك
+    </button>
+
+    <!-- زر السعر -->
+    <button onclick="showPrice()" title="السعر / الثمن">السعر</button>
+
+    <!-- صندوق المعلومات -->
+    <div id="infoBox"></div>
+
+    <p>مرحبا بالجميع في مدرسة تعليم الجدب وتسليط الضوء</p>
+
+    <script>
+        function showBtn() {
+            const btn = document.getElementById("btn2");
+            btn.style.display = "inline-block";
+            btn.style.opacity = 1;
+        }
+
+        const infoBox = document.getElementById("infoBox");
+
+        function showHindam() {
+            infoBox.innerHTML = "<strong>هندام:</strong><br>1- الجدب<br>2- طريقة لبسك للبيع أو للمقابلة أو لعملية الجدب سواء في فيديو أو واقع";
+            showInfoBox();
+        }
+
+        function showIsharat() {
+            infoBox.innerHTML = "<strong>الإشارات:</strong><br>- كيفية لفت الانتباه<br>- التأثير<br>- حركات الأصابع<br>- حركات اليدين<br>- اتساق حركة اليد مع الكلام أو الصمت";
+            showInfoBox();
+        }
+
+        function showHarakat() {
+            infoBox.innerHTML = "<strong>الحركات:</strong><br>- قوامة الجسم<br>- رياضة<br>- المشي<br>- كيفية الالتفات<br>- كيفية النظر<br>- كيفية الوقوف";
+            showInfoBox();
+        }
+
+        function showKalam() {
+            infoBox.innerHTML = "<strong>الكلام:</strong><br>- اللغة<br>- اختيار الكلمات<br>- إرشادات إلى كتب تساعد في جدب الزبون";
+            showInfoBox();
+        }
+
+        function showPrice() {
+            infoBox.innerHTML = "<strong>السعر:</strong> 300 DA";
+            showInfoBox();
+        }
+
+        function showInfoBox() {
+            infoBox.classList.remove('show');
+            void infoBox.offsetWidth; // إعادة تشغيل الحركة
+            infoBox.classList.add('show');
+        }
+    </script>
+</body>
+</html>
