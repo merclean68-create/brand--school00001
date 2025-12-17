@@ -1,10 +1,9 @@
-[صفجة تطور الدات 00.html](https://github.com/user-attachments/files/24223244/00.html)
+[2مشروع تطور الدات.txt](https://github.com/user-attachments/files/24223287/2.txt)
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>brand-school</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo_2010.png/600px-Mercedes-Benz_logo_2010.png');
@@ -38,7 +37,7 @@
             background-position: center;
             text-shadow: 1px 1px 2px black;
             word-break: keep-all;
-            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         button:hover {
@@ -46,13 +45,22 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        button:active {
-            background-color: #005f8b;
-        }
-
         #btn2 {
             display: none;
             margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #0077b6;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Benz_logo_2010.png/600px-Mercedes-Benz_logo_2010.png');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 1px 1px 2px black;
+            word-break: keep-all;
+            transition: all 0.5s ease;
         }
 
         /* صندوق الشرح */
@@ -60,36 +68,14 @@
             margin-top: 20px;
             padding: 20px;
             border-radius: 10px;
-            background-color: rgba(0, 119, 182, 0.95);
+            background-color: rgba(0, 119, 182, 0.8);
             color: white;
             font-size: 16px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            display: none;
+            display: none; /* مخفي بشكل افتراضي */
             text-align: right;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            position: relative;
-        }
-
-        /* زر الإغلاق */
-        #closeBtn {
-            position: absolute;
-            top: 5px;
-            left: 10px;
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        #infoBox.show {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* تصميم متجاوب */
@@ -112,80 +98,74 @@
     <h2>دورة تعليم</h2>
     <h3>قوامة الجسم</h3>
 
-    <!-- الأزرار الرئيسية مع أيقونات -->
-    <button title="تعلم الأسلوب الفرنسي"><i class="fas fa-flag"></i> Style France</button>
-    <button title="تعلم الأسلوب العربي"><i class="fas fa-flag"></i> Style Arabic</button>
-    <button title="تعلم الأسلوب الإنجليزي"><i class="fas fa-flag"></i> Style English</button>
-    <button title="اختيار التخصص"><i class="fas fa-graduation-cap"></i> التخصص</button>
+    <!-- الأزرار الرئيسية -->
+    <button title="تعلم الأسلوب الفرنسي">Style France</button>
+    <button title="تعلم الأسلوب العربي">Style Arabic</button>
+    <button title="تعلم الأسلوب الإنجليزي">Style English</button>
+    <button title="اختيار التخصص">التخصص</button>
 
     <!-- الزر لإظهار الزر المخفي -->
-    <button onclick="showBtn()" title="اضغط لإظهار الزر المخفي"><i class="fas fa-eye"></i> اضغط لإظهار الزر</button>
+    <button onclick="showBtn()" title="اضغط لإظهار الزر المخفي">اضغط لإظهار الزر</button>
     <button id="btn2" title="اللغة + اختيار الكلمات + إرشاد إلى كتب جدب الزبون">
-        <i class="fas fa-book"></i> اللغة + اختيار الكلمات + إرشاد إلى كتب جدب الزبون
+        اللغة + اختيار الكلمات + إرشاد إلى كتب جدب الزبون
     </button>
 
     <!-- أزرار الشرح -->
-    <button onclick="showHindam()" title="تعلم الهندام"><i class="fas fa-tshirt"></i> هندام</button>
-    <button onclick="showIsharat()" title="تعلم الإشارات"><i class="fas fa-hand-paper"></i> الإشارات</button>
-    <button onclick="showHarakat()" title="تعلم الحركات"><i class="fas fa-running"></i> الحركات</button>
-    <button onclick="showKalam()" title="تعلم الكلام"><i class="fas fa-comment"></i> الكلام</button>
+    <button onclick="showHindam()" title="تعلم الهندام">هندام</button>
+    <button onclick="showIsharat()" title="تعلم الإشارات">الإشارات</button>
+    <button onclick="showHarakat()" title="تعلم الحركات">الحركات</button>
+    <button onclick="showKalam()" title="تعلم الكلام">الكلام</button>
 
     <!-- زر اتصل بنا -->
-    <button onclick="window.location.href='mailto:your-email@example.com'" title="اتصل بنا"><i class="fas fa-envelope"></i> اتصل بنا</button>
+    <button onclick="window.location.href='mailto:your-email@example.com'" title="اتصل بنا">
+        اتصل بنا
+    </button>
 
     <!-- زر التواصل عبر فيسبوك -->
-    <button onclick="window.open('https://www.facebook.com/YourPage', '_blank')" title="تواصل معنا على فيسبوك"><i class="fab fa-facebook"></i> فيسبوك</button>
+    <button onclick="window.open('https://www.facebook.com/YourPage', '_blank')" title="تواصل معنا على فيسبوك">
+        فيسبوك
+    </button>
 
     <!-- زر السعر -->
-    <button onclick="showPrice()" title="السعر / الثمن"><i class="fas fa-dollar-sign"></i> السعر</button>
+    <button onclick="showPrice()" title="السعر / الثمن">السعر</button>
 
-    <!-- صندوق المعلومات مع زر إغلاق -->
-    <div id="infoBox">
-        <button id="closeBtn" onclick="hideInfo()">&times;</button>
-        <div id="infoContent"></div>
-    </div>
+    <!-- صندوق المعلومات -->
+    <div id="infoBox"></div>
 
     <p>مرحبا بالجميع في مدرسة تعليم الجدب وتسليط الضوء</p>
 
     <script>
-        const infoBox = document.getElementById("infoBox");
-        const infoContent = document.getElementById("infoContent");
-
         function showBtn() {
             const btn = document.getElementById("btn2");
             btn.style.display = "inline-block";
             btn.style.opacity = 1;
         }
 
-        function hideInfo() {
-            infoBox.classList.remove('show');
-        }
-
-        function showInfo(content) {
-            infoContent.innerHTML = content;
-            infoBox.classList.remove('show'); // إعادة تشغيل الحركة
-            void infoBox.offsetWidth; 
-            infoBox.classList.add('show');
-        }
+        const infoBox = document.getElementById("infoBox");
 
         function showHindam() {
-            showInfo("<strong>هندام:</strong><br>1- الجدب<br>2- طريقة لبسك للبيع أو للمقابلة أو لعملية الجدب سواء في فيديو أو واقع");
+            infoBox.style.display = "block";
+            infoBox.innerHTML = "<strong>هندام:</strong><br>1- الجدب<br>2- طريقة لبسك للبيع أو للمقابلة أو لعملية الجدب سواء في فيديو أو واقع";
         }
 
         function showIsharat() {
-            showInfo("<strong>الإشارات:</strong><br>- كيفية لفت الانتباه<br>- التأثير<br>- حركات الأصابع<br>- حركات اليدين<br>- اتساق حركة اليد مع الكلام أو الصمت");
+            infoBox.style.display = "block";
+            infoBox.innerHTML = "<strong>الإشارات:</strong><br>- كيفية لفت الانتباه<br>- التأثير<br>- حركات الأصابع<br>- حركات اليدين<br>- اتساق حركة اليد مع الكلام أو الصمت";
         }
 
         function showHarakat() {
-            showInfo("<strong>الحركات:</strong><br>- قوامة الجسم<br>- رياضة<br>- المشي<br>- كيفية الالتفات<br>- كيفية النظر<br>- كيفية الوقوف");
+            infoBox.style.display = "block";
+            infoBox.innerHTML = "<strong>الحركات:</strong><br>- قوامة الجسم<br>- رياضة<br>- المشي<br>- كيفية الالتفات<br>- كيفية النظر<br>- كيفية الوقوف";
         }
 
         function showKalam() {
-            showInfo("<strong>الكلام:</strong><br>- اللغة<br>- اختيار الكلمات<br>- إرشادات إلى كتب تساعد في جدب الزبون");
+            infoBox.style.display = "block";
+            infoBox.innerHTML = "<strong>الكلام:</strong><br>- اللغة<br>- اختيار الكلمات<br>- إرشادات إلى كتب تساعد في جدب الزبون";
         }
 
         function showPrice() {
-            showInfo("<strong>السعر:</strong> 300 DA");
+            infoBox.style.display = "block";
+            infoBox.innerHTML = "<strong>السعر:</strong> 300 DA";
         }
     </script>
 </body>
